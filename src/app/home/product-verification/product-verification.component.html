@@ -1,0 +1,36 @@
+
+  <div class="container mt-5" >
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card" style="width:100%;">
+            <div style="text-align: center;">
+            <img class="card-img-top" src="/assets/img/mobile-logo.png" alt="mobile image" style="height: 100px;width: 100px;">
+        </div>
+            <div class="card-body">
+                <div style="text-align: center;">
+              <h5 class="card-title">Model:{{verifyeddata.name}}</h5>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: center;"><span style="color: red;">Company:</span>{{verifyeddata.company}}</div>
+                <div class="col" style="text-align: center;"> <span style="color: red;">Price:</span>{{verifyeddata.price}}</div>
+              </div>
+              <div class="mt-2">Please select Transaction option</div>
+              <div class="row mt-2">
+                <div class="col">
+                   <span><input type="checkbox" value="Cashon" name="Cashon" aria-label="Checkbox for following text input"  #myCheckbox1 (change)="onCheckboxChange(myCheckbox1)">&nbsp;Cash on delivery</span>     
+                </div>
+                <div class="col">
+              <input type="checkbox" value="online" aria-label="Checkbox for following text input" #myCheckbox2 (change)="onCheckboxChange(myCheckbox2)">&nbsp;Online Payment
+                    
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col" style="text-align: center;"><button class="btn btn-danger" (click)="back()">Back</button></div>
+                <div class="col" style="text-align: center;"><button class="btn btn-success" (click)="buy()">Buy</button></div>
+              </div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+</div>

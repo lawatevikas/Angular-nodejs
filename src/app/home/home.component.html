@@ -1,0 +1,18 @@
+<div class="container mt-5" >
+    <div class="row justify-content-center">
+        <div class="row" style="background-color:salmon;">
+            <div class="col">Sr.No</div>
+            <div class="col">Name</div>
+            <div class="col">Company</div>
+            <div class="col">price</div>
+            <div class="col">Action</div>
+        </div>
+        <div class="row mt-4" *ngFor="let item of product;let i = index" style="background-color: rgb(142, 195, 247);" >
+            <div class="col">{{i+1}}</div>
+            <div class="col">{{item.name}}</div>
+            <div class="col">{{item.company}}</div>
+            <div class="col">{{item.price}}</div>
+            <div class="col"><button class="btn btn-success" size="small"(click)="buy(item._id)">Buy</button></div>
+        </div>
+    </div>   
+</div>
