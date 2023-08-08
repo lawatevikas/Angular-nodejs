@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login.service';
 import {  Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -50,7 +51,7 @@ export class LoginComponent implements OnInit {
   }
 
   postData() {
-    const url = 'http://localhost:5000/resister'; // Replace with your API endpoint
+    const url = `${environment.apiUrl}resister`; // Replace with your API endpoint
     const data ={ "name": this.name,
                   "email":this.email,
                  "password":this.password}
@@ -68,7 +69,7 @@ export class LoginComponent implements OnInit {
       });
   }
   getdata(){
-    const url = 'http://localhost:5000/login'; // Replace with your API endpoint
+    const url =`${environment.apiUrl}login`; // Replace with your API endpoint
     const data ={ 
                   "email":this.email,
                  "password":this.password}

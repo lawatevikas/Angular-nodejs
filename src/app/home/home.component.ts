@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FetchdataService } from '../services/fetchdata.service';
 import { Router } from '@angular/router';
 import { DataTransferService } from '../services/data-transfer.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ selectedproduct:any
   }
 
 getproductlist(){
-  const url = 'http://localhost:5000/product-list'; 
+  const url = `${environment.apiUrl}product-list`; 
 this.fetchdataservice.getdata(url).subscribe((data)=>{
 this.productlist=data;
 this.product=this.productlist.data.products
